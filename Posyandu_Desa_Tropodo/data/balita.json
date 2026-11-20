@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "nama": "Wira Arkana",
+    "umur": "2 Tahun 5 Bulan",
+    "ttl": "Sidoarjo, 25 Maret 2024",
+    "jk": "Laki-laki",
+    "nik": "0908378468",
+    "status": "Normal",
+    "berat": 12.4,
+    "tinggi": 86
+  },
+  {
+    "id": 2,
+    "nama": "Aura Ana",
+    "umur": "2 Tahun 5 Bulan",
+    "ttl": "Sidoarjo, 10 April 2024",
+    "jk": "Perempuan",
+    "nik": "0908378469",
+    "status": "Normal",
+    "berat": 11.8,
+    "tinggi": 84
+  }
+]
