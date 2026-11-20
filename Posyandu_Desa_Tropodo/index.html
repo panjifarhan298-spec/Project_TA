@@ -4,26 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posyandu Desa Tropodo</title>
+    <title>Posyandu Desa Tropodo - Sistem Informasi Kesehatan</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS lama tetap digunakan -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css?v=20261117blue">
 </head>
 
 <body class="landing-body">
+
+    <div class="hero-splash-screen" id="heroSplashScreen" role="status" aria-label="Memuat Posyandu Tropodo">
+        <div class="hero-splash-logo">
+            <img src="assets/img/logo-sidoarjo.png" alt="Lambang Kabupaten Sidoarjo">
+        </div>
+        <div class="hero-splash-brand">Posyandu Tropodo</div>
+        <div class="hero-splash-place">Sistem Informasi Posyandu Desa Tropodo</div>
+        <div class="hero-splash-loading"><span></span><span></span><span></span></div>
+        <div class="hero-splash-progress" aria-hidden="true"><span></span></div>
+    </div>
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg landing-navbar sticky-top">
         <div class="container">
 
-            <a class="navbar-brand app-brand" href="index.html">
+            <a class="navbar-brand app-brand" href="index.html" style="color: #123B70 !important;">
                 <img src="assets/img/logo-sidoarjo.png"
                      class="app-brand-logo"
-                     alt="Logo Posyandu">
+                     alt="Lambang Kabupaten Sidoarjo">
                 <span>Posyandu Tropodo</span>
             </a>
 
@@ -47,10 +56,10 @@
                 </ul>
             </div>
 
-            <a href="#tentang"
-               class="btn btn-login-outline btn-sm ms-lg-3">
+            <a href="#batasan"
+               class="btn btn-login-outline btn-sm landing-login-top ms-lg-3">
                 <i class="fa-solid fa-right-to-bracket me-1"></i>
-                Tentang Aplikasi
+                Masuk ke Sistem
             </a>
 
         </div>
@@ -77,9 +86,8 @@
                 </h2>
 
                 <p class="hero-tagline mx-auto">
-                    Pengelolaan dan pemantauan terintegrasi untuk
-                    Balita, Ibu Hamil, dan Lansia di seluruh wilayah
-                    Desa Tropodo.
+                    Pengelolaan dan pemantauan terintegrasi untuk Balita,
+                    Ibu Hamil, dan Lansia di seluruh wilayah Desa Tropodo.
                 </p>
 
                 <div class="hero-splash-dots">
@@ -91,13 +99,6 @@
             </div>
         </div>
     </header>
-
-    <section class="container pt-4">
-        <div class="alert alert-info mb-0" role="note">
-            Halaman GitHub Pages ini hanya menampilkan informasi. Fitur login dan pengelolaan data
-            memerlukan server PHP dan database, sehingga tidak tersedia di hosting statis.
-        </div>
-    </section>
 
     <!-- KATEGORI LAYANAN -->
     <section id="kategori" class="py-5 bg-white">
@@ -111,8 +112,7 @@
                 </h3>
 
                 <p class="text-muted">
-                    Pemisahan data mandiri untuk mendukung pencatatan
-                    kesehatan yang akurat dan terorganisir.
+                    Pemisahan data mandiri untuk mendukung pencatatan kesehatan yang akurat dan terorganisir.
                 </p>
             </div>
 
@@ -122,7 +122,7 @@
                 <div class="col-md-4">
                     <div class="stat-card stat-card-balita h-100 text-center p-4">
 
-                        <div class="stat-icon mb-3 mx-auto">
+                        <div class="stat-icon mb-3 mx-auto" style="width:60px;height:60px;font-size:1.5rem;background:linear-gradient(135deg,#60A5FA,#123B70);">
                             <i class="fa-solid fa-child-reaching"></i>
                         </div>
 
@@ -130,12 +130,14 @@
                             Data Balita
                         </h5>
 
-                        <p class="text-muted small">
-                            Pemantauan berat badan, tinggi badan,
-                            status gizi, serta grafik pertumbuhan balita.
+                        <p class="text-muted small mb-3">
+                            Pemantauan berat badan, tinggi badan, status gizi (Normal, Berisiko, Stunting),
+                            serta grafik pertumbuhan balita.
                         </p>
 
-                        <span class="badge rounded-pill text-bg-light">Fitur tersedia di aplikasi server</span>
+                        <a href="#batasan" class="btn btn-outline-blue btn-sm px-3 rounded-pill">
+                            Buka Data Balita <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -144,7 +146,7 @@
                 <div class="col-md-4">
                     <div class="stat-card stat-card-bumil h-100 text-center p-4">
 
-                        <div class="stat-icon mb-3 mx-auto">
+                        <div class="stat-icon mb-3 mx-auto" style="width:60px;height:60px;font-size:1.5rem;background:linear-gradient(135deg,#3B82F6,#1D4ED8);">
                             <i class="fa-solid fa-person-pregnant"></i>
                         </div>
 
@@ -152,12 +154,13 @@
                             Data Ibu Hamil
                         </h5>
 
-                        <p class="text-muted small">
-                            Pencatatan usia kehamilan, perkiraan lahir,
-                            tekanan darah, dan pemeriksaan rutin.
+                        <p class="text-muted small mb-3">
+                            Pencatatan usia kehamilan, perkiraan lahir (HPL), tekanan darah, dan pemeriksaan rutin ibu hamil.
                         </p>
 
-                        <span class="badge rounded-pill text-bg-light">Fitur tersedia di aplikasi server</span>
+                        <a href="#batasan" class="btn btn-outline-blue btn-sm px-3 rounded-pill">
+                            Buka Data Ibu Hamil <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -166,7 +169,7 @@
                 <div class="col-md-4">
                     <div class="stat-card stat-card-lansia h-100 text-center p-4">
 
-                        <div class="stat-icon mb-3 mx-auto">
+                        <div class="stat-icon mb-3 mx-auto" style="width:60px;height:60px;font-size:1.5rem;background:linear-gradient(135deg,#93C5FD,#1E40AF);">
                             <i class="fa-solid fa-person-cane"></i>
                         </div>
 
@@ -174,12 +177,13 @@
                             Data Lansia
                         </h5>
 
-                        <p class="text-muted small">
-                            Monitoring tekanan darah, berat badan,
-                            tinggi badan, dan riwayat pemeriksaan lansia.
+                        <p class="text-muted small mb-3">
+                            Monitoring tekanan darah, berat dan tinggi badan, serta riwayat pemeriksaan kesehatan lansia secara berkala.
                         </p>
 
-                        <span class="badge rounded-pill text-bg-light">Fitur tersedia di aplikasi server</span>
+                        <a href="#batasan" class="btn btn-outline-blue btn-sm px-3 rounded-pill">
+                            Buka Data Lansia <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -202,7 +206,7 @@
                 </h3>
 
                 <p class="text-muted">
-                    Pilih Posyandu untuk melihat informasi.
+                    Klik pada kartu Posyandu untuk melihat ringkasan statistik dan grafik pertumbuhan wilayah.
                 </p>
             </div>
 
@@ -226,8 +230,7 @@
                     </h3>
 
                     <p class="text-muted">
-                        Aplikasi ini membantu kader dan bidan desa
-                        memantau kesehatan masyarakat secara terintegrasi.
+                        Aplikasi ini membantu kader dan bidan desa memantau kesehatan masyarakat secara terintegrasi.
                     </p>
 
                     <ul class="list-unstyled tentang-list">
@@ -235,19 +238,19 @@
                         <li>
                             <i class="fa-solid fa-circle-check text-primary"></i>
                             <strong>Data Balita:</strong>
-                            Pemantauan status gizi dan risiko stunting.
+                            Pemantauan status gizi dan deteksi dini risiko stunting.
                         </li>
 
                         <li>
                             <i class="fa-solid fa-circle-check text-primary"></i>
                             <strong>Data Ibu Hamil:</strong>
-                            Pemantauan kehamilan dan HPL.
+                            Pengawalan usia kehamilan dan hari perkiraan lahir (HPL).
                         </li>
 
                         <li>
                             <i class="fa-solid fa-circle-check text-primary"></i>
                             <strong>Data Lansia:</strong>
-                            Pemeriksaan kesehatan secara berkala.
+                            Pemeriksaan berkala tekanan darah dan kondisi fisik lansia.
                         </li>
 
                     </ul>
@@ -255,7 +258,7 @@
                 </div>
 
                 <div class="col-md-6 text-center">
-                    <div class="tentang-illustration mx-auto">
+                    <div class="tentang-illustration mx-auto shadow-sm" style="background:linear-gradient(135deg,#E0EFFE,#BFDBFE);color:#123B70;">
                         <i class="fa-solid fa-hospital-user"></i>
                     </div>
                 </div>
@@ -264,13 +267,18 @@
         </div>
     </section>
 
+    <section id="batasan" class="container py-4">
+        <div class="alert alert-info mb-0" role="note">
+            Halaman GitHub Pages hanya menampilkan informasi. Login, statistik, dan pengelolaan data
+            memerlukan server PHP dan database.
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="app-footer text-center py-4 bg-white border-top">
         <div class="container">
             <p class="mb-0 small text-muted">
-                &copy; <span id="currentYear"></span>
-                Posyandu Desa Tropodo.
-                Sistem Informasi Posyandu Terpadu.
+                &copy; <span id="currentYear"></span> Posyandu Desa Tropodo &mdash; Sistem Informasi Posyandu Terpadu.
             </p>
         </div>
     </footer>
@@ -294,13 +302,59 @@
                 <div class="modal-body">
                     <p id="modalAddress" class="text-muted small"></p>
 
-                    <div class="alert alert-info small">
-                        Statistik akan ditampilkan setelah database
-                        berhasil dihubungkan.
+                    <div class="row g-2 mb-3 text-center">
+                        <div class="col-3">
+                            <div class="mini-stat">
+                                <div class="fw-bold fs-5" style="color:#123B70;">—</div>
+                                <div class="small text-muted">Total Balita</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="mini-stat">
+                                <div class="fw-bold fs-5 text-success">—</div>
+                                <div class="small text-muted">Normal</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="mini-stat">
+                                <div class="fw-bold fs-5" style="color:#d97706;">—</div>
+                                <div class="small text-muted">Berisiko</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="mini-stat">
+                                <div class="fw-bold fs-5 text-danger">—</div>
+                                <div class="small text-muted">Stunting</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-2 mb-3 text-center posyandu-extra-stats">
+                        <div class="col-6">
+                            <div class="mini-stat mini-stat-pregnant">
+                                <div class="fw-bold fs-5" style="color:#2563EB;">—</div>
+                                <div class="small text-muted">Total Ibu Hamil</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mini-stat mini-stat-elderly">
+                                <div class="fw-bold fs-5" style="color:#1E40AF;">—</div>
+                                <div class="small text-muted">Total Lansia</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info small mb-0">
+                        Statistik dan grafik hanya tersedia saat aplikasi dijalankan dengan server PHP dan database.
                     </div>
                 </div>
 
                 <div class="modal-footer">
+                    <div class="d-flex gap-2">
+                        <a href="#batasan" class="btn btn-sm btn-outline-primary">Lihat Balita</a>
+                        <a href="#batasan" class="btn btn-sm btn-outline-primary">Lihat Bumil</a>
+                        <a href="#batasan" class="btn btn-sm btn-outline-primary">Lihat Lansia</a>
+                    </div>
                     <button class="btn btn-secondary btn-sm"
                             data-bs-dismiss="modal">
                         Tutup

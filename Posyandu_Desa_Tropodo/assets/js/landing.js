@@ -1,13 +1,13 @@
 
 const posyanduList = [
-    { id: 1, nama: "Posyandu 1" },
-    { id: 2, nama: "Posyandu 2" },
-    { id: 3, nama: "Posyandu 3" },
-    { id: 4, nama: "Posyandu 4" },
-    { id: 5, nama: "Posyandu 5" },
-    { id: 6, nama: "Posyandu 6" },
-    { id: 7, nama: "Posyandu 7" },
-    { id: 8, nama: "Posyandu 8" }
+    { id: 1, nama: "Posyandu Tropodo 1", alamat: "Dusun Tropodo 1, Desa Tropodo" },
+    { id: 2, nama: "Posyandu Tropodo 2", alamat: "Dusun Tropodo 2, Desa Tropodo" },
+    { id: 3, nama: "Posyandu Tropodo 3", alamat: "Dusun Tropodo 3, Desa Tropodo" },
+    { id: 4, nama: "Posyandu Tropodo 4", alamat: "Dusun Tropodo 4, Desa Tropodo" },
+    { id: 5, nama: "Posyandu Tropodo 5", alamat: "Dusun Tropodo 5, Desa Tropodo" },
+    { id: 6, nama: "Posyandu Tropodo 6", alamat: "Dusun Tropodo 6, Desa Tropodo" },
+    { id: 7, nama: "Posyandu Tropodo 7", alamat: "Dusun Tropodo 7, Desa Tropodo" },
+    { id: 8, nama: "Posyandu Tropodo 8", alamat: "Dusun Tropodo 8, Desa Tropodo" }
 ];
 
 const icons = [
@@ -26,7 +26,7 @@ const container = document.getElementById("posyanduCards");
 container.innerHTML = posyanduList.map((item, index) => `
     <div class="col-6 col-md-4 col-lg-3">
 
-        <div class="card posyandu-landing-card h-100 text-center"
+        <div class="card posyandu-landing-card posyandu-clickable h-100 text-center"
              role="button"
              tabindex="0"
              data-id="${item.id}">
@@ -37,17 +37,28 @@ container.innerHTML = posyanduList.map((item, index) => `
                     <i class="fa-solid ${icons[index]}"></i>
                 </div>
 
-                <h6 class="fw-bold">
+                <h6 class="fw-bold mb-1" style="color:#123B70;">
                     ${item.nama}
                 </h6>
 
-                <p class="small text-muted">
-                    Desa Tropodo
+                <p class="small text-muted mb-2">
+                    ${item.alamat}
                 </p>
 
-                <p class="small text-primary mb-0">
-                    <i class="fa-solid fa-chart-simple"></i>
-                    Lihat Detail
+                <div class="posyandu-category-counts" aria-label="Kategori layanan">
+                    <span class="badge-status badge-normal"><i class="fa-solid fa-child-reaching me-1"></i>Balita</span>
+                    <span class="badge-status badge-ibu-hamil"><i class="fa-solid fa-person-pregnant me-1"></i>Bumil</span>
+                    <span class="badge-status badge-lansia"><i class="fa-solid fa-person-cane me-1"></i>Lansia</span>
+                </div>
+
+                <div class="posyandu-data-links mt-2">
+                    <a href="#batasan" class="btn btn-data-link btn-data-balita" onclick="event.stopPropagation()">Balita</a>
+                    <a href="#batasan" class="btn btn-data-link btn-data-ibu" onclick="event.stopPropagation()">Bumil</a>
+                    <a href="#batasan" class="btn btn-data-link btn-data-lansia" onclick="event.stopPropagation()">Lansia</a>
+                </div>
+
+                <p class="small mt-2 mb-0 fw-semibold" style="color:#60A5FA;">
+                    <i class="fa-solid fa-chart-simple me-1"></i>Lihat Detail
                 </p>
 
             </div>
@@ -63,8 +74,7 @@ function tampilkanDetail(id) {
 
     document.getElementById("modalTitle").textContent = data.nama;
 
-    document.getElementById("modalAddress").textContent =
-        "Informasi alamat akan ditambahkan setelah data diverifikasi.";
+    document.getElementById("modalAddress").textContent = data.alamat;
 
     const modal = new bootstrap.Modal(
         document.getElementById("posyanduModal")
@@ -74,6 +84,7 @@ function tampilkanDetail(id) {
 }
 
 container.addEventListener("click", function(event) {
+    if (event.target.closest("a")) return;
     const card = event.target.closest("[data-id]");
 
     if (card) {
@@ -93,3 +104,13 @@ container.addEventListener("keydown", function(event) {
 
 document.getElementById("currentYear").textContent =
     new Date().getFullYear();
+
+const splash = document.getElementById("heroSplashScreen");
+if (splash) {
+    window.setTimeout(function() {
+        splash.classList.add("is-hidden");
+        window.setTimeout(function() {
+            splash.remove();
+        }, 700);
+    }, 2200);
+}
