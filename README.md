@@ -18,7 +18,7 @@ Setelah import selesai, buka sekali `http://localhost/Posyandu_Desa_Tropodo/data
 
 ## Publikasi halaman informasi di GitHub Pages
 
-Workflow `.github/workflows/pages.yml` memublikasikan halaman informasi statis dari `Posyandu_Desa_Tropodo/index.html` saat ada push ke branch `main` atau `master`. Di repositori GitHub, buka **Settings → Pages** dan pilih **GitHub Actions** sebagai sumber publikasi. Workflow juga dapat dijalankan manual dari tab **Actions**.
+Workflow `.github/workflows/pages.yml` memublikasikan halaman informasi statis yang sama dengan tampilan utama saat ada push ke branch `main` atau `master`. File `index.html` di root juga mengarahkan pengunjung ke halaman tersebut jika Pages masih memakai sumber branch. Di repositori GitHub, pilih **Settings → Pages → GitHub Actions** agar hanya workflow tersebut yang menerbitkan situs. Workflow juga dapat dijalankan manual dari tab **Actions**.
 
 GitHub Pages hanya melayani file statis, jadi login, database, dan pengelolaan data PHP tidak akan berfungsi di sana. Untuk memakai fitur tersebut, jalankan aplikasi dengan PHP/MySQL seperti langkah XAMPP di atas.
 

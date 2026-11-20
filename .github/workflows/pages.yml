@@ -25,11 +25,12 @@ jobs:
 
       - name: Assemble static site
         run: |
-          mkdir -p site/assets/css site/assets/img site/assets/js
-          cp Posyandu_Desa_Tropodo/index.html site/index.html
+          mkdir -p site/Posyandu_Desa_Tropodo/assets/js site/assets/css site/assets/img
+          cp index.html site/index.html
+          cp Posyandu_Desa_Tropodo/index.html site/Posyandu_Desa_Tropodo/index.html
           cp assets/css/style.css site/assets/css/style.css
           cp assets/img/logo-sidoarjo.png site/assets/img/logo-sidoarjo.png
-          cp Posyandu_Desa_Tropodo/assets/js/landing.js site/assets/js/landing.js
+          cp Posyandu_Desa_Tropodo/assets/js/landing.js site/Posyandu_Desa_Tropodo/assets/js/landing.js
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
