@@ -50,7 +50,7 @@ require_once 'includes/navbar.php';
   <div class="page-heading mb-4 d-flex flex-wrap justify-content-between align-items-end gap-2">
     <div>
       <h4 class="fw-bold mb-0" style="color: #123B70;"><i class="fa-solid fa-person-cane me-2" style="color: #60A5FA;"></i>Data Lansia</h4>
-      <p class="text-muted small mb-0">Pengelolaan data kesehatan dan penyakit kronis lansia Posyandu Desa Tropodo</p>
+      <p class="text-muted small mb-0">Pengelolaan data kesehatan dan penyakit kronis lansia Posyandu Desa Kemuning Tropodo</p>
     </div>
     <div class="d-flex gap-2 flex-wrap">
       <a href="export-data.php?kategori=lansia&cari=<?= urlencode($cari) ?>&posyandu_id=<?= $posyanduFilter ?>" class="btn btn-outline-success btn-sm"><i class="fa-solid fa-file-excel me-1"></i> Rekap Excel</a>

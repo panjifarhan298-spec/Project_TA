@@ -29,6 +29,7 @@ if ($jumlah > 0) {
 
 $hashAdmin = password_hash('admin123', PASSWORD_DEFAULT);
 $hashBidan = password_hash('bidan123', PASSWORD_DEFAULT);
+$hashPetugas = password_hash('petugas123', PASSWORD_DEFAULT);
 
 $stmt = mysqli_prepare($koneksi, "INSERT INTO users (username, password, nama, role, created_at) VALUES (?, ?, ?, ?, NOW())");
 
@@ -36,14 +37,19 @@ $username = 'admin'; $nama = 'Administrator'; $role = 'admin';
 mysqli_stmt_bind_param($stmt, "ssss", $username, $hashAdmin, $nama, $role);
 mysqli_stmt_execute($stmt);
 
-$username = 'bidan'; $nama = 'Bidan Desa Tropodo'; $role = 'bidan';
+$username = 'bidan'; $nama = 'Bidan Desa Kemuning Tropodo'; $role = 'bidan';
 mysqli_stmt_bind_param($stmt, "ssss", $username, $hashBidan, $nama, $role);
 mysqli_stmt_execute($stmt);
 
-echo "<div style='font-family:sans-serif;padding:24px;max-width:520px;margin:40px auto;border:1px solid #f7a8c4;border-radius:16px;'>";
-echo "<h3 style='color:#ef7fac;'>Akun default berhasil dibuat &#127881;</h3>";
-echo "<p><strong>Admin</strong> &rarr; username: <code>admin</code> / password: <code>admin123</code></p>";
-echo "<p><strong>Bidan</strong> &rarr; username: <code>bidan</code> / password: <code>bidan123</code></p>";
+$username = 'petugas'; $nama = 'Petugas Posyandu Desa Kemuning Tropodo'; $role = 'petugas';
+mysqli_stmt_bind_param($stmt, "ssss", $username, $hashPetugas, $nama, $role);
+mysqli_stmt_execute($stmt);
+
+echo "<div style='font-family:sans-serif;padding:24px;max-width:520px;margin:40px auto;border:1px solid #60A5FA;border-radius:16px;background:#F0F7FF;'>";
+echo "<h3 style='color:#123B70;'>3 Akun Default Berhasil Dibuat &#127881;</h3>";
+echo "<p><strong>1. Admin</strong> &rarr; username: <code>admin</code> / password: <code>admin123</code></p>";
+echo "<p><strong>2. Bidan</strong> &rarr; username: <code>bidan</code> / password: <code>bidan123</code></p>";
+echo "<p><strong>3. Petugas</strong> &rarr; username: <code>petugas</code> / password: <code>petugas123</code></p>";
 echo "<p style='color:#c53c3c;'><strong>PENTING:</strong> Hapus file <code>buat-akun-default.php</code> ini sekarang dari folder htdocs Anda demi keamanan.</p>";
-echo "<a href='login.php' style='display:inline-block;margin-top:8px;background:#f7a8c4;color:#fff;padding:8px 20px;border-radius:50px;text-decoration:none;'>Ke Halaman Login</a>";
+echo "<a href='login.php' style='display:inline-block;margin-top:8px;background:#123B70;color:#fff;padding:8px 20px;border-radius:50px;text-decoration:none;'>Ke Halaman Login</a>";
 echo "</div>";

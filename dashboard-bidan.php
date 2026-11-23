@@ -80,7 +80,7 @@ $daftarPosyandu = [];
 $resP = mysqli_query($koneksi, "SELECT id, nama FROM posyandu ORDER BY id ASC");
 while ($row = mysqli_fetch_assoc($resP)) $daftarPosyandu[] = $row;
 
-$pageTitle = "Dashboard Petugas - Posyandu System";
+$pageTitle = (($_SESSION['role'] ?? '') === 'bidan' ? "Dashboard Bidan" : "Dashboard Petugas") . " - Posyandu System";
 require_once 'includes/header.php';
 require_once 'includes/navbar.php';
 ?>
@@ -195,7 +195,7 @@ require_once 'includes/navbar.php';
           <i class="fa-solid fa-chart-pie" style="color: #60A5FA; font-size: 1.15rem;"></i>
           <h5 class="fw-bold mb-0" style="color: #123B70;">Statistik Data Warga</h5>
         </div>
-        <p class="text-muted small mb-4">Jumlah warga dan pemeriksaan Balita, Ibu Hamil, serta Lansia di Posyandu Desa Tropodo.</p>
+        <p class="text-muted small mb-4">Jumlah warga dan pemeriksaan Balita, Ibu Hamil, serta Lansia di Posyandu Desa Kemuning Tropodo.</p>
         <canvas id="chartStatistikWarga" height="230"></canvas>
       </div>
     </div>
@@ -222,7 +222,7 @@ require_once 'includes/navbar.php';
           </a>
 
           <a href="data-posyandu.php" class="btn btn-quick-access btn-quick-navy">
-            <i class="fa-solid fa-house-medical me-2"></i> Data 8 Posyandu Tropodo
+            <i class="fa-solid fa-house-medical me-2"></i> Data 8 Posyandu Desa Kemuning Tropodo
           </a>
         </div>
       </div>

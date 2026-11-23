@@ -7,8 +7,16 @@ $aktif = basename($_SERVER['PHP_SELF']);
 $userRole = $_SESSION['role'] ?? 'petugas';
 $dashboardUrl = $userRole === 'admin' ? 'dashboard-admin.php' : 'dashboard-bidan.php';
 $isDashboard = $aktif === 'dashboard-admin.php' || $aktif === 'dashboard-bidan.php';
-$roleTitle = $userRole === 'admin' ? 'ADMIN UTAMA' : 'PETUGAS POSYANDU';
-$panelTitle = $userRole === 'admin' ? 'Panel Admin Utama' : 'Panel Petugas Posyandu';
+if ($userRole === 'admin') {
+    $roleTitle = 'ADMIN UTAMA';
+    $panelTitle = 'Panel Admin Utama';
+} elseif ($userRole === 'bidan') {
+    $roleTitle = 'BIDAN DESA';
+    $panelTitle = 'Panel Bidan Desa';
+} else {
+    $roleTitle = 'PETUGAS POSYANDU';
+    $panelTitle = 'Panel Petugas Posyandu';
+}
 ?>
 <div class="app-shell">
 
@@ -19,7 +27,7 @@ $panelTitle = $userRole === 'admin' ? 'Panel Admin Utama' : 'Panel Petugas Posya
     </button>
     <a class="app-brand" href="<?= $dashboardUrl ?>">
       <img class="app-brand-logo" src="assets/img/logo-sidoarjo.png" alt="Lambang Kabupaten Sidoarjo">
-      <span>POSYANDU SYSTEM</span>
+      <span>POSYANDU DESA KEMUNING TROPODO</span>
     </a>
     <a class="btn-logout top-logout" href="logout.php" title="Logout" aria-label="Logout"><i class="fa-solid fa-right-from-bracket"></i></a>
   </header>
@@ -32,7 +40,7 @@ $panelTitle = $userRole === 'admin' ? 'Panel Admin Utama' : 'Panel Petugas Posya
     <div class="sidebar-head">
       <a class="sidebar-brand" href="<?= $dashboardUrl ?>">
         <span class="sidebar-brand-icon"><img src="assets/img/logo-sidoarjo.png" alt="Lambang Kabupaten Sidoarjo"></span>
-        <span class="sidebar-brand-text">POSYANDU SYSTEM<small style="color: #60A5FA; font-weight: 700; letter-spacing: 0.5px;">Role: <?= $roleTitle ?></small></span>
+        <span class="sidebar-brand-text" style="font-size: 0.8rem; line-height: 1.25;">POSYANDU KEMUNING TROPODO<small style="color: #60A5FA; font-weight: 700; letter-spacing: 0.5px;">Role: <?= $roleTitle ?></small></span>
       </a>
       <button class="sidebar-close d-lg-none" type="button" id="sidebarClose" aria-label="Tutup menu">
         <i class="fa-solid fa-xmark"></i>

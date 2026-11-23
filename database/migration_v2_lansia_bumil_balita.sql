@@ -5,11 +5,9 @@
 
 USE posyandu_tropodo;
 
--- 1. Penyesuaian Role pada Tabel users (tambahkan 'petugas')
+-- 1. Penyesuaian Role pada Tabel users (tiga role: admin, bidan, petugas)
 ALTER TABLE users 
   MODIFY COLUMN role ENUM('admin','bidan','petugas') NOT NULL DEFAULT 'petugas';
-
-UPDATE users SET role = 'petugas' WHERE role = 'bidan';
 
 -- 2. Penyesuaian Tabel balita
 ALTER TABLE balita

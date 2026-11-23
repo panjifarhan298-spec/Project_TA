@@ -45,7 +45,7 @@ while ($row = mysqli_fetch_assoc($resG)) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PenTing Balita Desa Tropodo</title>
+<title>Posyandu Desa Kemuning Tropodo</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -99,20 +99,20 @@ body.splash-active { overflow: hidden; }
 </nav>
 
 <header class="hero-section text-center">
-  <div class="hero-splash-screen" id="heroSplashScreen" role="status" aria-label="Memuat PenTing Balita">
+  <div class="hero-splash-screen" id="heroSplashScreen" role="status" aria-label="Memuat Posyandu Desa Kemuning Tropodo">
     <div class="hero-splash-logo"><img src="assets/img/logo-sidoarjo.png" alt="Lambang Kabupaten Sidoarjo"></div>
-    <div class="hero-splash-brand">PenTing Balita</div>
-    <div class="hero-splash-place">Desa Tropodo</div>
+    <div class="hero-splash-brand">Posyandu Desa Kemuning Tropodo</div>
+    <div class="hero-splash-place">Sistem Informasi Posyandu Desa Kemuning Tropodo</div>
     <div class="hero-splash-loading"><span></span><span></span><span></span></div>
     <div class="hero-splash-progress" aria-hidden="true"><span></span></div>
   </div>
   <div class="container py-5">
-    <div class="hero-splash-animation" aria-label="PenTing Balita Desa Tropodo">
+    <div class="hero-splash-animation" aria-label="Posyandu Desa Kemuning Tropodo">
       <div class="hero-splash-orbit"></div>
       <div class="hero-icon mb-3"><i class="fa-solid fa-child-reaching"></i></div>
-      <h1 class="fw-bold hero-title">PenTing Balita</h1>
-      <h2 class="fw-semibold hero-subtitle mb-3">Desa Tropodo</h2>
-      <p class="hero-tagline mx-auto">Pantau tumbuh kembang balita dengan mudah.</p>
+      <h1 class="fw-bold hero-title">Sistem Informasi Posyandu</h1>
+      <h2 class="fw-semibold hero-subtitle mb-3">Desa Kemuning Tropodo</h2>
+      <p class="hero-tagline mx-auto">Pantau tumbuh kembang balita, ibu hamil, dan lansia dengan mudah.</p>
       <div class="hero-splash-dots" aria-hidden="true"><span></span><span></span><span></span></div>
     </div>
   </div>
@@ -122,7 +122,7 @@ body.splash-active { overflow: hidden; }
   <div class="container">
     <div class="text-center mb-4">
       <span class="section-badge">8 Posyandu Aktif</span>
-      <h3 class="fw-bold mt-2">Posyandu di Desa Tropodo</h3>
+      <h3 class="fw-bold mt-2">Posyandu di Desa Kemuning Tropodo</h3>
       <p class="text-muted">Setiap Posyandu memantau tumbuh kembang balita di wilayahnya masing-masing.</p>
     </div>
     <div class="row g-3 g-lg-4">

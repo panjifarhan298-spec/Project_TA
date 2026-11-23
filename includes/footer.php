@@ -1,6 +1,6 @@
     <footer class="app-footer text-center py-4 mt-4">
       <p class="mb-0 small text-muted">
-        &copy; <?= date('Y') ?> Posyandu Desa Tropodo &mdash; Sistem Informasi Posyandu.
+        &copy; <?= date('Y') ?> Posyandu Desa Kemuning Tropodo &mdash; Sistem Informasi Posyandu.
       </p>
     </footer>
 

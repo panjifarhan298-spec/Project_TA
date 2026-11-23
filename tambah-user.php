@@ -5,7 +5,7 @@ require_once 'includes/functions.php';
 cekRole('admin');
 $error = $_GET['error'] ?? '';
 
-$pageTitle = "Tambah User Petugas";
+$pageTitle = "Tambah Pengguna Baru";
 require_once 'includes/header.php';
 require_once 'includes/navbar.php';
 ?>
@@ -15,9 +15,9 @@ require_once 'includes/navbar.php';
     <div>
       <div class="d-flex align-items-center gap-2 mb-1">
         <a href="manajemen-user.php" class="btn btn-sm btn-light" aria-label="Kembali ke manajemen user"><i class="fa-solid fa-arrow-left"></i></a>
-        <h4 class="fw-bold mb-0" style="color: #123B70;">Tambah User Petugas</h4>
+        <h4 class="fw-bold mb-0" style="color: #123B70;">Tambah Pengguna Baru</h4>
       </div>
-      <p class="text-muted small mb-0">Buat akun Petugas baru untuk mengakses dan mengelola sistem Posyandu.</p>
+      <p class="text-muted small mb-0">Buat akun pengguna baru dengan pilihan hak akses Admin, Bidan, atau Petugas.</p>
     </div>
   </div>
 
@@ -40,14 +40,14 @@ require_once 'includes/navbar.php';
         <div class="d-flex align-items-center gap-3 mb-4">
           <div class="user-avatar" style="background: #E0EFFE; color: #123B70;"><i class="fa-solid fa-user-plus"></i></div>
           <div>
-            <h6 class="fw-bold mb-1" style="color: #123B70;">Data Akun Petugas Baru</h6>
+            <h6 class="fw-bold mb-1" style="color: #123B70;">Data Akun Baru</h6>
             <p class="small text-muted mb-0">Pastikan username unik dan belum pernah didaftarkan.</p>
           </div>
         </div>
 
         <form action="proses/tambah-user.php" method="POST" autocomplete="off">
           <div class="mb-3">
-            <label for="nama" class="form-label small fw-semibold">Nama Lengkap Petugas <span class="text-danger">*</span></label>
+            <label for="nama" class="form-label small fw-semibold">Nama Lengkap <span class="text-danger">*</span></label>
             <input type="text" id="nama" name="nama" class="form-control" maxlength="100" placeholder="Contoh: Siti Aminah, A.Md.Keb" required>
           </div>
           <div class="mb-3">
@@ -58,9 +58,11 @@ require_once 'includes/navbar.php';
           <div class="mb-3">
             <label for="role" class="form-label small fw-semibold">Role / Hak Akses <span class="text-danger">*</span></label>
             <select id="role" name="role" class="form-select" required>
-              <option value="petugas" selected>Petugas</option>
+              <option value="petugas" selected>Petugas (Kader / Petugas Lapangan)</option>
+              <option value="bidan">Bidan (Tenaga Kesehatan / Bidan Desa)</option>
+              <option value="admin">Admin (Administrator Utama)</option>
             </select>
-            <div class="form-text">Akun dibuat dengan hak akses Petugas Posyandu.</div>
+            <div class="form-text">Pilih salah satu dari 3 role: Admin, Bidan, atau Petugas.</div>
           </div>
           <div class="row g-3">
             <div class="col-md-6">
@@ -74,17 +76,27 @@ require_once 'includes/navbar.php';
           </div>
           <div class="d-flex justify-content-end gap-2 mt-4">
             <a href="manajemen-user.php" class="btn btn-light px-4">Batal</a>
-            <button type="submit" class="btn btn-primary-blue btn-3d px-4"><i class="fa-solid fa-user-plus me-1"></i> Simpan Petugas</button>
+            <button type="submit" class="btn btn-primary-blue btn-3d px-4"><i class="fa-solid fa-user-plus me-1"></i> Simpan Pengguna</button>
           </div>
         </form>
       </div>
     </div>
     <div class="col-lg-5">
       <div class="chart-card h-100">
-        <h6 class="fw-bold mb-3" style="color: #123B70;"><i class="fa-solid fa-shield-halved me-1" style="color: #60A5FA;"></i> Informasi Petugas</h6>
-        <div class="small text-muted">
-          <p>Petugas posyandu memiliki akses penuh untuk mencatat dan mengelola data Balita, Ibu Hamil, Lansia, jadwal, serta riwayat pemeriksaan.</p>
-          <p>Keamanan akun terjamin dengan enkripsi password standar industri (Bcrypt).</p>
+        <h6 class="fw-bold mb-3" style="color: #123B70;"><i class="fa-solid fa-shield-halved me-1" style="color: #60A5FA;"></i> Pembagian 3 Role Pengguna</h6>
+        <div class="small text-muted d-flex flex-column gap-3">
+          <div class="p-2 rounded bg-light border-start border-3 border-primary">
+            <strong class="text-primary d-block mb-1"><i class="fa-solid fa-user-gear me-1"></i> 1. Admin</strong>
+            Memiliki hak akses penuh untuk mengelola pengguna, menghapus data, melihat laporan, dan log aktivitas login sistem.
+          </div>
+          <div class="p-2 rounded bg-light border-start border-3 border-danger">
+            <strong class="text-danger d-block mb-1"><i class="fa-solid fa-user-doctor me-1"></i> 2. Bidan</strong>
+            Tenaga medis posyandu untuk mencatat pelayanan klinis, imunisasi balita, dan pemeriksaan kesehatan ibu hamil.
+          </div>
+          <div class="p-2 rounded bg-light border-start border-3 border-success">
+            <strong class="text-success d-block mb-1"><i class="fa-solid fa-user-check me-1"></i> 3. Petugas</strong>
+            Kader posyandu untuk pendataan dan monitoring balita, ibu hamil, lansia, dan jadwal posyandu di wilayah desa.
+          </div>
         </div>
       </div>
     </div>

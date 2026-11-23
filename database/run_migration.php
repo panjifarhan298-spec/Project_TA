@@ -6,12 +6,11 @@
 require_once __DIR__ . '/../config/koneksi.php';
 
 $output = [];
-$output[] = "=== Memulai Migrasi Database Posyandu Tropodo V2.1 ===";
+$output[] = "=== Memulai Migrasi Database Posyandu Desa Kemuning Tropodo V2.1 ===";
 
-// 1. Update Role Users (tambah 'petugas')
+// 1. Update Role Users (tiga role: 'admin', 'bidan', 'petugas')
 @mysqli_query($koneksi, "ALTER TABLE users MODIFY COLUMN role ENUM('admin','bidan','petugas') NOT NULL DEFAULT 'petugas'");
-@mysqli_query($koneksi, "UPDATE users SET role = 'petugas' WHERE role = 'bidan'");
-$output[] = "[OK] Role pengguna disesuaikan (mendukung 'admin' & 'petugas').";
+$output[] = "[OK] Role pengguna disesuaikan (mendukung 3 role: 'admin', 'bidan', dan 'petugas').";
 
 // 2. Kolom tambahan di balita
 @mysqli_query($koneksi, "ALTER TABLE balita ADD COLUMN IF NOT EXISTS alamat TEXT DEFAULT NULL AFTER nama_ibu");
@@ -152,7 +151,7 @@ $output[] = "=== Migrasi Selesai dengan Sukses! ===";
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Migrasi Database V2.1 - Posyandu Tropodo</title>
+<title>Migrasi Database V2.1 - Posyandu Desa Kemuning Tropodo</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>

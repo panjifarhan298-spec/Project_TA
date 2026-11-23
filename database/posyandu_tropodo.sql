@@ -1,6 +1,6 @@
 -- =========================================================
 -- Database: posyandu_tropodo
--- Sistem Informasi PenTing Balita Desa Tropodo
+-- Sistem Informasi PenTing Balita Desa Kemuning Tropodo
 -- =========================================================
 
 CREATE DATABASE IF NOT EXISTS posyandu_tropodo
@@ -35,14 +35,14 @@ CREATE TABLE IF NOT EXISTS posyandu (
 ) ENGINE=InnoDB;
 
 INSERT INTO posyandu (nama, alamat) VALUES
-('Posyandu Tropodo 1', 'Dusun Tropodo 1, Desa Tropodo'),
-('Posyandu Tropodo 2', 'Dusun Tropodo 2, Desa Tropodo'),
-('Posyandu Tropodo 3', 'Dusun Tropodo 3, Desa Tropodo'),
-('Posyandu Tropodo 4', 'Dusun Tropodo 4, Desa Tropodo'),
-('Posyandu Tropodo 5', 'Dusun Tropodo 5, Desa Tropodo'),
-('Posyandu Tropodo 6', 'Dusun Tropodo 6, Desa Tropodo'),
-('Posyandu Tropodo 7', 'Dusun Tropodo 7, Desa Tropodo'),
-('Posyandu Tropodo 8', 'Dusun Tropodo 8, Desa Tropodo');
+('Posyandu Kemuning Tropodo 1', 'Dusun Tropodo 1, Desa Tropodo'),
+('Posyandu Kemuning Tropodo 2', 'Dusun Tropodo 2, Desa Tropodo'),
+('Posyandu Kemuning Tropodo 3', 'Dusun Tropodo 3, Desa Tropodo'),
+('Posyandu Kemuning Tropodo 4', 'Dusun Tropodo 4, Desa Tropodo'),
+('Posyandu Kemuning Tropodo 5', 'Dusun Tropodo 5, Desa Tropodo'),
+('Posyandu Kemuning Tropodo 6', 'Dusun Tropodo 6, Desa Tropodo'),
+('Posyandu Kemuning Tropodo 7', 'Dusun Tropodo 7, Desa Tropodo'),
+('Posyandu Kemuning Tropodo 8', 'Dusun Tropodo 8, Desa Tropodo');
 
 -- ---------------------------------------------------------
 -- Tabel: balita

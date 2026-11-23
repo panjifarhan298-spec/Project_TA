@@ -21,7 +21,7 @@ require_once 'includes/navbar.php';
   <div class="page-heading mb-4 d-flex flex-wrap justify-content-between align-items-end gap-2">
     <div>
       <h4 class="fw-bold mb-1">Layanan Imunisasi</h4>
-      <p class="text-muted small mb-0">Informasi imunisasi dasar dan lanjutan untuk balita Desa Tropodo.</p>
+      <p class="text-muted small mb-0">Informasi imunisasi dasar dan lanjutan untuk balita Posyandu Desa Kemuning Tropodo.</p>
     </div>
     <a href="jadwal-posyandu.php" class="btn btn-outline-blue btn-sm"><i class="fa-solid fa-calendar-days me-1"></i> Lihat Jadwal Posyandu</a>
   </div>

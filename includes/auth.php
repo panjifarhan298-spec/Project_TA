@@ -15,14 +15,15 @@ function cekLogin() {
 
 function cekRole($role) {
     cekLogin();
-    // Jika mengecek bidan, perbolehkan juga role 'petugas'
-    if ($role === 'bidan' && in_array($_SESSION['role'], ['bidan', 'petugas'], true)) {
+    if ($_SESSION['role'] === $role) {
         return;
     }
-    if ($_SESSION['role'] !== $role) {
-        header("Location: /Posyandu_Desa_Tropodo/login.php?error=akses_ditolak");
-        exit;
+    // Jika mengecek bidan atau petugas, perbolehkan role staf layanan (bidan & petugas)
+    if (in_array($role, ['bidan', 'petugas'], true) && in_array($_SESSION['role'], ['bidan', 'petugas'], true)) {
+        return;
     }
+    header("Location: /Posyandu_Desa_Tropodo/login.php?error=akses_ditolak");
+    exit;
 }
 
 function cekRoleAdminAtauBidan() {

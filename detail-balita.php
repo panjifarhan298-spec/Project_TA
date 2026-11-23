@@ -52,7 +52,7 @@ require_once 'includes/navbar.php';
     <div class="col-lg-4">
       <div class="chart-card text-center h-100">
         <?php if (!empty($balita['foto']) && file_exists('assets/upload/' . $balita['foto'])): ?>
-          <img src="assets/upload/<?= bersih($balita['foto']) ?>" class="foto-detail mb-3" alt="foto">
+          <img src="assets/upload/<?= bersih($balita['foto']) ?>" class="foto-detail d-block mx-auto mb-3" alt="foto">
         <?php else: ?>
           <div class="foto-detail d-flex align-items-center justify-content-center bg-light mx-auto mb-3">
             <i class="fa-solid fa-baby fa-3x text-muted"></i>

@@ -32,7 +32,7 @@ if ($kategori === 'lansia') {
     }
 
     echo "<table border='1'>
-    <tr><th colspan='13' style='background:#123B70; color:#FFFFFF; font-size:14pt;'>REKAP DATA LANSIA - DESA TROPODO</th></tr>
+    <tr><th colspan='13' style='background:#123B70; color:#FFFFFF; font-size:14pt;'>REKAP DATA LANSIA - POSYANDU DESA KEMUNING TROPODO</th></tr>
     <tr style='background:#E0EFFE; font-weight:bold;'>
       <th>No</th><th>ID Lansia</th><th>NIK</th><th>Nama Lansia</th><th>Jenis Kelamin</th><th>Tanggal Lahir</th><th>Umur (Thn)</th><th>Alamat</th><th>No. Telepon</th><th>Berat (Kg)</th><th>Penyakit Kronis</th><th>Tekanan Darah</th><th>Tgl Pemeriksaan</th><th>Posyandu</th>
     </tr>";
@@ -77,7 +77,7 @@ if ($kategori === 'lansia') {
     }
 
     echo "<table border='1'>
-    <tr><th colspan='15' style='background:#123B70; color:#FFFFFF; font-size:14pt;'>REKAP DATA IBU HAMIL - DESA TROPODO</th></tr>
+    <tr><th colspan='15' style='background:#123B70; color:#FFFFFF; font-size:14pt;'>REKAP DATA IBU HAMIL - POSYANDU DESA KEMUNING TROPODO</th></tr>
     <tr style='background:#E0EFFE; font-weight:bold;'>
       <th>No</th><th>ID Ibu Hamil</th><th>NIK</th><th>Nama Ibu Hamil</th><th>Tanggal Lahir</th><th>Umur (Thn)</th><th>Alamat</th><th>No. Telepon</th><th>Usia Kehamilan (Mgg)</th><th>HPL</th><th>Berat (Kg)</th><th>L. Kepala (Cm)</th><th>L. Lengan / LiLA (Cm)</th><th>Tekanan Darah</th><th>Tgl Pemeriksaan</th><th>Posyandu</th>
     </tr>";
@@ -116,7 +116,7 @@ if ($kategori === 'lansia') {
     $res = mysqli_query($koneksi, $sql);
 
     echo "<table border='1'>
-    <tr><th colspan='13' style='background:#123B70; color:#FFFFFF; font-size:14pt;'>REKAP DATA BALITA - DESA TROPODO</th></tr>
+    <tr><th colspan='13' style='background:#123B70; color:#FFFFFF; font-size:14pt;'>REKAP DATA BALITA - POSYANDU DESA KEMUNING TROPODO</th></tr>
     <tr style='background:#E0EFFE; font-weight:bold;'>
       <th>No</th><th>ID Balita</th><th>NIK</th><th>Nama Balita</th><th>Jenis Kelamin</th><th>Tanggal Lahir</th><th>Umur (Bln)</th><th>Nama Ayah</th><th>Nama Ibu</th><th>Alamat</th><th>Berat (Kg)</th><th>Tinggi (Cm)</th><th>Status Gizi</th><th>Posyandu</th>
     </tr>";
